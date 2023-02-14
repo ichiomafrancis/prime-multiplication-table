@@ -7,11 +7,17 @@ import Table from "./Components/Table";
 const App = () => {
   const [input, setInput] = useState("");
   const [primeNos, setPrimeNos] = useState([]);
+
   return (
     <div className="app">
       <Header />
-      <Form />
-      <Table input={input} setInput={setInput} />
+      <Form
+        input={input}
+        setInput={setInput}
+        primeNos={primeNos}
+        setPrimeNos={setPrimeNos}
+      />
+      <Table />
     </div>
   );
 };
