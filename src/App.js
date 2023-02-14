@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Header from "./Components/Header";
 import Form from "./Components/Form";
-import TableRow from "./Components/TableRow";
+import Table from "./Components/Table";
 
 const App = () => {
   const [input, setInput] = useState("");
@@ -11,7 +11,7 @@ const App = () => {
     <div className="app">
       <Header />
       <Form />
-      <TableRow input={input} setInput={setInput} />
+      <Table input={input} setInput={setInput} />
     </div>
   );
 };
