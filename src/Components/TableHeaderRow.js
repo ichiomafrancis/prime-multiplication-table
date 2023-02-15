@@ -1,8 +1,9 @@
 import React from "react";
 
 const TableHeaderRow = (primeNos) => {
-  const headerRow = primeNos.map((nos) => {
-    return <th>nos</th>;
+  // const primeNos = [2, 3, 5, 7, 11, 13, 17];
+  const headerRow = primeNos.map((num) => {
+    return `<th>${num}</th>`;
   });
 
   return (

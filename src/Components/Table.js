@@ -3,18 +3,21 @@ import Row from "./Row";
 import TableHeaderRow from "./TableHeaderRow";
 
 const Table = (primeNos) => {
-  const table = Row.map((row) => {
-    return (
-      <tr>
-        <th>primeNos</th>row
-      </tr>
-    );
-  });
+  let table;
+  for (let data in tableData) {
+    table = primeNos.map(() => {
+      return <Row primeNos={primeNos} />;
+      // return `<tr>
+      //     <th><Row /></th>${row}
+      //   </tr>`;
+    });
+  }
+  console.log(table);
 
   return (
     <div>
       <table>
-        <TableHeaderRow />
+        <TableHeaderRow primeNos={primeNos} />
         {table}
       </table>
     </div>
