@@ -1,11 +1,11 @@
 import React from "react";
 
-const Row = () => {
-  return (
-    <div>
-      <h1>This will contain the format for each row</h1>
-    </div>
-  );
+const Row = (primeNos) => {
+  const tableData = primeNos.map((item) => {
+    return <td>item</td>;
+  });
+
+  return <div>{tableData}</div>;
 };
 
 export default Row;

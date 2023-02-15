@@ -5,19 +5,19 @@ import Form from "./Components/Form";
 import Table from "./Components/Table";
 
 const App = () => {
-  const [input, setInput] = useState("");
+  // const [input, setInput] = useState(2);
   const [primeNos, setPrimeNos] = useState([]);
 
   return (
     <div className="app">
       <Header />
       <Form
-        input={input}
-        setInput={setInput}
+        // input={input}
+        // setInput={setInput}
         primeNos={primeNos}
         setPrimeNos={setPrimeNos}
       />
-      <Table />
+      <Table primeNos={primeNos} />
     </div>
   );
 };
