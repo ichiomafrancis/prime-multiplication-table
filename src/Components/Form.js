@@ -1,34 +1,7 @@
 import React from "react";
 
-const Form = (primeNos, setPrimeNos) => {
-  // Function to handle the submit task
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-
-    // setPrimeNos([]);
-  };
-  // Function to handle the input change task
-  const handleInputChange = (event) => {
-    if (event.target.value !== 0) {
-      let range = Number(event.target.value);
-      console.log(range);
-      receiveRange(range);
-    }
-    // console.log(event.target.value);
-  };
-
-  // Receive and check the inputed value
-  const receiveRange = (range) => {
-    if (isNaN(range) && range < 2) {
-      alert(
-        "The input must be a number and it must be greater than or equal to 2"
-      );
-    } else {
-      // getPrimeNos(range);
-    }
-  };
-
-  // Check if a number is a prime number
+const Form = ({ input, setInput, primeNos, setPrimeNos }) => {
+  // Function to check if a number is a prime number
   const isPrime = (n) => {
     if (n === 0 || n === 1) return false;
 
@@ -39,14 +12,26 @@ const Form = (primeNos, setPrimeNos) => {
   };
 
   // Check through each no within the range and get the prime numbers
-  // const getPrimeNos = (number) => {
-  //   for (let i = 1; i <= number; i++) {
-  //     if (isPrime(i)) {
-  //       primeNos.push(i);
-  //     }
-  //   }
-  //   // console.log(primeNos);
-  // };
+  const getPrimeNos = (number) => {
+    for (let i = 1; i <= number; i++) {
+      if (isPrime(i)) {
+        setPrimeNos(...primeNos, i);
+      }
+    }
+  };
+
+  // Function to handle the input change task
+  const handleInputChange = (event) => {
+    setInput(event.target.value);
+  };
+
+  // Function to handle the submit task
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    if (input.length !== 0 && input >= 2) {
+      getPrimeNos(input);
+    }
+  };
 
   return (
     <form onSubmit={handleFormSubmit}>

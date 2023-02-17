@@ -1,22 +1,31 @@
-import React from "react";
-// import React, { useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
+import Form from "./Components/Form";
 import TableHeaderRow from "./Components/TableHeaderRow";
-// import Form from "./Components/Form";
 import TableBody from "./Components/TableBody";
 
 const App = () => {
-  // const [input, setInput] = useState(2);
-  // const [primeNos, setPrimeNos] = useState([]);
+  const [input, setInput] = useState("");
+  const [primeNos, setPrimeNos] = useState([]);
 
   return (
     <div className="app">
+      <div>
+        <Form
+          input={input}
+          setInput={setInput}
+          primeNos={primeNos}
+          setPrimeNos={setPrimeNos}
+        />
+      </div>
+
       <table>
         <thead>
-          <TableHeaderRow />
+          <TableHeaderRow primeNos={primeNos} />
         </thead>
+
         <tbody>
-          <TableBody />
+          <TableBody primeNos={primeNos} />
         </tbody>
       </table>
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 
-const TableBody = () => {
-  const primeNos = [2, 3, 5, 7, 11, 13, 17];
+const TableBody = ({ primeNos }) => {
+  // const primeNos = [2, 3, 5, 7, 11, 13, 17];
 
   let table = [];
 
