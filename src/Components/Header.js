@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <div>
-      <h1>Prime Multiplication Table</h1>
+      <h1>Multiplication Table Of Prime Numbers</h1>
     </div>
   );
 };

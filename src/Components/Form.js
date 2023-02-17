@@ -13,11 +13,13 @@ const Form = ({ input, setInput, primeNos, setPrimeNos }) => {
 
   // Check through each no within the range and get the prime numbers
   const getPrimeNos = (number) => {
+    let primes = [];
     for (let i = 1; i <= number; i++) {
       if (isPrime(i)) {
-        setPrimeNos(...primeNos, i);
+        primes.push(i);
       }
     }
+    setPrimeNos(primes);
   };
 
   // Function to handle the input change task
@@ -35,7 +37,7 @@ const Form = ({ input, setInput, primeNos, setPrimeNos }) => {
 
   return (
     <form onSubmit={handleFormSubmit}>
-      <span>From 2 - </span>
+      <span>Between 2 and </span>
       <input
         type="number"
         // value={input}

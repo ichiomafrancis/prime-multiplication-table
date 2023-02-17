@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
+import Header from "./Components/Header";
 import Form from "./Components/Form";
-import TableHeaderRow from "./Components/TableHeaderRow";
-import TableBody from "./Components/TableBody";
+import Table from "./Components/Table";
 
 const App = () => {
   const [input, setInput] = useState("");
@@ -10,7 +10,10 @@ const App = () => {
 
   return (
     <div className="app">
-      <div>
+      <div className="header">
+        <Header />
+      </div>
+      <div className="form">
         <Form
           input={input}
           setInput={setInput}
@@ -18,16 +21,9 @@ const App = () => {
           setPrimeNos={setPrimeNos}
         />
       </div>
-
-      <table>
-        <thead>
-          <TableHeaderRow primeNos={primeNos} />
-        </thead>
-
-        <tbody>
-          <TableBody primeNos={primeNos} />
-        </tbody>
-      </table>
+      <div className="table">
+        <Table primeNos={primeNos} />
+      </div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const TableBody = ({ primeNos }) => {
   // const primeNos = [2, 3, 5, 7, 11, 13, 17];
@@ -9,14 +10,14 @@ const TableBody = ({ primeNos }) => {
     let row = [];
 
     for (let j = 0; j < primeNos.length; j++) {
-      row.push(<td>{primeNos[i] * primeNos[j]}</td>);
+      row.push(<td key={uuidv4()}>{primeNos[i] * primeNos[j]}</td>);
     }
     table.push(row);
   }
 
   const tbody = table.map((row, i) => {
     return (
-      <tr key={i}>
+      <tr key={uuidv4()}>
         <th>{primeNos[i]}</th>
         {row}
       </tr>
