@@ -1,6 +1,6 @@
 import React from "react";
 
-const Form = ({ input, setInput, primeNos, setPrimeNos }) => {
+const Form = ({ input, setInput, setPrimeNos }) => {
   // Function to check if a number is a prime number
   const isPrime = (n) => {
     if (n === 0 || n === 1) return false;
@@ -40,7 +40,7 @@ const Form = ({ input, setInput, primeNos, setPrimeNos }) => {
       <span>Between 2 and </span>
       <input
         type="number"
-        // value={input}
+        value={input}
         onChange={handleInputChange}
         placeholder="Enter end point....."
         className="form--input"

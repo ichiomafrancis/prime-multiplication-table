@@ -6,18 +6,8 @@ HTML {
   font-size: 62.5%;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Inter", sans-serif;
   background-color: blueviolet;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 1.6rem;
 }

@@ -14,14 +14,9 @@ const App = () => {
         <Header />
       </div>
       <div className="form">
-        <Form
-          input={input}
-          setInput={setInput}
-          primeNos={primeNos}
-          setPrimeNos={setPrimeNos}
-        />
+        <Form input={input} setInput={setInput} setPrimeNos={setPrimeNos} />
       </div>
-      <div className="table">
+      <div>
         <Table primeNos={primeNos} />
       </div>
     </div>

@@ -2,8 +2,6 @@ import React from "react";
 import { v4 as uuidv4 } from "uuid";
 
 const TableBody = ({ primeNos }) => {
-  // const primeNos = [2, 3, 5, 7, 11, 13, 17];
-
   let table = [];
 
   for (let i = 0; i < primeNos.length; i++) {
